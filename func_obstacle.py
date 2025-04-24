@@ -23,7 +23,7 @@ class Enemy(pygame.sprite.Sprite):
     def update(self, *args):
         self.rect.x -= self.speed_enemy
 
-        if self.rect.right <= 0:
+        if self.rect.right <= 0 or args[0]==args[1]:
             self.kill()
 
 
